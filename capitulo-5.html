@@ -18,15 +18,15 @@
       import React from 'react';
       import { createRoot } from 'react-dom/client';
 
-      // Componente e uma funcao que retorna JSX
-      function header() {
+      // Componente precisa comecar com letra MAIUSCULA
+      function Header() {
         return <h1>Develop. Preview. Ship.</h1>;
       }
 
       const domNode = document.getElementById('app');
       const root = createRoot(domNode);
-      // Nao funciona: nada aparece na tela
-      root.render(header);
+      // E precisa ser usado como tag, igual HTML
+      root.render(<Header />);
     </script>
   </body>
 </html>
