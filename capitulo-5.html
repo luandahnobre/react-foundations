@@ -23,6 +23,15 @@
         return <h1>Develop. Preview. Ship.</h1>;
       }
 
+      function HomePage() {
+        return (
+          <div>
+            {/* Aninhando o componente Header */}
+            <Header />
+          </div>
+        );
+      }
+
       const domNode = document.getElementById('app');
       const root = createRoot(domNode);
       // E precisa ser usado como tag, igual HTML
