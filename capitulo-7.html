@@ -29,7 +29,8 @@
       function HomePage() {
         const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
         // useState devolve um array: [valor do estado, funcao que atualiza]
-        const [likes, setLikes] = React.useState();
+        // O valor passado para o useState e o valor inicial
+        const [likes, setLikes] = React.useState(0);
 
         // Funcao que trata o evento de clique (event handler)
         function handleClick() {
