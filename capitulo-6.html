@@ -27,13 +27,11 @@
       }
 
       function HomePage() {
+        const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+
         return (
           <div>
-            {/* Reutilizando o Header com titulos diferentes */}
-            <Header title="React" />
-            <Header title="A new title" />
-            {/* Sem title: cai no titulo padrao */}
-            <Header />
+            <Header title="Develop. Preview. Ship." />
           </div>
         );
       }
