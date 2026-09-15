@@ -32,6 +32,12 @@
         return (
           <div>
             <Header title="Develop. Preview. Ship." />
+            <ul>
+              {/* map percorre o array e devolve um li para cada nome */}
+              {names.map((name) => (
+                <li>{name}</li>
+              ))}
+            </ul>
           </div>
         );
       }
