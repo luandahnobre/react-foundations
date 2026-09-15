@@ -1,5 +1,4 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
 
 // Componente precisa comecar com letra MAIUSCULA
 // Desestruturando o objeto props direto no parametro
@@ -36,8 +35,3 @@ function HomePage() {
     </div>
   );
 }
-
-const domNode = document.getElementById('app');
-const root = createRoot(domNode);
-// HomePage e o componente de nivel mais alto da arvore
-root.render(<HomePage />);
