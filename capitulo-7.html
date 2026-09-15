@@ -44,7 +44,8 @@
                 <li key={name}>{name}</li>
               ))}
             </ul>
-            <button>Like</button>
+            {/* Evento em camelCase: onClick */}
+            <button onClick={handleClick}>Like</button>
           </div>
         );
       }
