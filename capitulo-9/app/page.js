@@ -8,7 +8,8 @@ function Header({ title }) {
   return <h1>{title ? title : 'Default title'}</h1>;
 }
 
-function HomePage() {
+// export default: diz para o Next.js qual componente e a pagina principal
+export default function HomePage() {
   const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
   // useState devolve um array: [valor do estado, funcao que atualiza]
   // O valor passado para o useState e o valor inicial
