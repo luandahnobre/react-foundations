@@ -35,7 +35,8 @@
             <ul>
               {/* map percorre o array e devolve um li para cada nome */}
               {names.map((name) => (
-                <li>{name}</li>
+                // key unica para o React identificar cada item da lista
+                <li key={name}>{name}</li>
               ))}
             </ul>
           </div>
