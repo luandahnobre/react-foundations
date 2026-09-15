@@ -1,0 +1,38 @@
+import { useState } from 'react';
+
+// Componente precisa comecar com letra MAIUSCULA
+// Desestruturando o objeto props direto no parametro
+function Header({ title }) {
+  // Chaves {} abrem o "modo JavaScript" dentro do JSX
+  // Operador ternario: se nao vier title, mostra o padrao
+  return <h1>{title ? title : 'Default title'}</h1>;
+}
+
+// export default: diz para o Next.js qual componente e a pagina principal
+export default function HomePage() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+  // useState devolve um array: [valor do estado, funcao que atualiza]
+  // O valor passado para o useState e o valor inicial
+  const [likes, setLikes] = useState(0);
+
+  // Funcao que trata o evento de clique (event handler)
+  function handleClick() {
+    // Atualiza o estado; o React renderiza de novo com o novo valor
+    setLikes(likes + 1);
+  }
+
+  return (
+    <div>
+      <Header title="Develop. Preview. Ship." />
+      <ul>
+        {/* map percorre o array e devolve um li para cada nome */}
+        {names.map((name) => (
+          // key unica para o React identificar cada item da lista
+          <li key={name}>{name}</li>
+        ))}
+      </ul>
+      {/* Evento em camelCase: onClick */}
+      <button onClick={handleClick}>Like ({likes})</button>
+    </div>
+  );
+}
