@@ -19,15 +19,16 @@
       import { createRoot } from 'react-dom/client';
 
       // Componente precisa comecar com letra MAIUSCULA
-      function Header() {
+      function Header(props) {
+        console.log(props); // { title: "React" }
         return <h1>Develop. Preview. Ship.</h1>;
       }
 
       function HomePage() {
         return (
           <div>
-            {/* Aninhando o componente Header */}
-            <Header />
+            {/* Passando a prop title para o Header */}
+            <Header title="React" />
           </div>
         );
       }
