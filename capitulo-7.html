@@ -34,7 +34,8 @@
 
         // Funcao que trata o evento de clique (event handler)
         function handleClick() {
-          console.log('increment like count');
+          // Atualiza o estado; o React renderiza de novo com o novo valor
+          setLikes(likes + 1);
         }
 
         return (
