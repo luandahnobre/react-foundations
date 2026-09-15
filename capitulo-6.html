@@ -29,8 +29,11 @@
       function HomePage() {
         return (
           <div>
-            {/* Passando a prop title para o Header */}
+            {/* Reutilizando o Header com titulos diferentes */}
             <Header title="React" />
+            <Header title="A new title" />
+            {/* Sem title: cai no titulo padrao */}
+            <Header />
           </div>
         );
       }
