@@ -19,11 +19,19 @@
       import { createRoot } from 'react-dom/client';
 
       // Componente precisa comecar com letra MAIUSCULA
+      function createTitle(title) {
+        if (title) {
+          return title;
+        } else {
+          return 'Default title';
+        }
+      }
+
       // Desestruturando o objeto props direto no parametro
       function Header({ title }) {
         // Chaves {} abrem o "modo JavaScript" dentro do JSX
-        // Template literal: junta texto fixo com a variavel
-        return <h1>{`Cool ${title}`}</h1>;
+        // Valor retornado por uma funcao
+        return <h1>{createTitle(title)}</h1>;
       }
 
       function HomePage() {
